@@ -1,0 +1,16 @@
+### endpoint using annotation to observe the application
+GET http://localhost:8081/annotation
+Accept: application/json
+
+### endpoint by Observation client code
+GET http://localhost:8081/programmatic
+Accept: application/json
+
+### retrieve the active span from the endpoint
+GET http://localhost:8081/activeSpan
+Accept: application/json
+
+### propogate the span to other service
+GET http://localhost:8081/propagate
+Accept: application/json
+

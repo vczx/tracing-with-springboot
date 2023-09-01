@@ -1,0 +1,19 @@
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+server:
+  port: 8081
+
+tracing:
+  url: http://localhost:4318/v1/traces
+spring:
+  application:
+    name: tracing-with-springboot
